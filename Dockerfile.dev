@@ -1,0 +1,13 @@
+FROM node:alpine
+
+WORKDIR '/app'
+COPY frontend/package.json .
+
+RUN npm install
+
+# not strictly necessary anymore
+COPY frontend . 
+
+CMD [ "npm", "run", "start"]
+
+# set up a docker volume in docker-compose
