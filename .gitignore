@@ -48,3 +48,4 @@ _x/
 !.htaccess
 !.editorconfig
 !.phpcs.xml.dist
+!.travis.yml
