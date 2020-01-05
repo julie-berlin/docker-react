@@ -5,7 +5,8 @@ WORKDIR '/app'
 COPY ./frontend/package.json ./
 RUN npm install
 COPY ./frontend ./ 
-CMD [ "npm", "run", "build"]
+# CMD [ "npm", "run", "build"]
+RUN npm run build
 
 ## RUN PHASE 
 FROM nginx
