@@ -2,9 +2,9 @@
 ## BUILD PHASE
 FROM node:alpine as builder
 WORKDIR '/app'
-COPY frontend/package.json ./
+COPY ./frontend/package.json ./
 RUN npm install
-COPY frontend ./ 
+COPY ./frontend ./ 
 CMD [ "npm", "run", "build"]
 
 ## RUN PHASE 
